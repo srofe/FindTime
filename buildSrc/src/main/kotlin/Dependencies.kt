@@ -22,5 +22,8 @@ object Versions {
         const val material = "com.google.android.material:material:${Versions.material}"
         const val app_compat = "androidx.appcompat:appcompat:${Versions.app_compat}"
         const val constraint_layout = "androidx.constraintlayout:constraintlayout:${Versions.constraint_layout}"
+
+        const val kotlin_gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin_gradle_plugin}"
+        const val android_gradle_plugin = "com.android.tools.build:gradle:${Versions.android_gradle_plugin}"
     }
 }
