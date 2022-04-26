@@ -1,0 +1,5 @@
+const val androidPlugin = "android"
+const val androidApp = "com.android.application"
+const val androidLib = "com.android.library"
+const val multiplatform = "multiplatform"
+const val cocoapods = "native.cocoapods"
