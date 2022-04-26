@@ -5,8 +5,10 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath(Versions.Deps.kotlin_gradle_plugin)
-        classpath(Versions.Deps.android_gradle_plugin)
+        with(Deps) {
+            classpath(kotlin_gradle_plugin)
+            classpath(android_gradle_plugin)
+        }
     }
 }
 

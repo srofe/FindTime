@@ -20,8 +20,12 @@ android {
 }
 
 dependencies {
-    implementation(project(Versions.frameworkName))
-    implementation(Versions.Deps.material)
-    implementation(Versions.Deps.app_compat)
-    implementation(Versions.Deps.constraint_layout)
+    implementation(project(frameworkName))
+
+    with(Deps) {
+        implementation(material)
+        implementation(app_compat)
+        implementation(constraint_layout)
+        implementation(napier)
+    }
 }
