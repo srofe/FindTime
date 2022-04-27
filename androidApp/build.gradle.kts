@@ -45,10 +45,10 @@ dependencies {
 
     with (Deps.Compose) {
         implementation(compose)
-        implementation("androidx.compose.ui:ui-util:1.1.1")
-        implementation("androidx.compose.ui:ui-tooling:1.1.1")
-        implementation("androidx.compose.material:material-icons-extended:1.1.1")
+        implementation(compose_util)
+        implementation(compose_ui_tooling)
         implementation(material)
+        implementation(material_icons_extended)
         implementation(compiler)
         implementation(foundation)
         implementation(ui_tooling_preview)
