@@ -20,6 +20,10 @@ object Versions {
     const val napier = "2.1.0"
     const val kotlinxDateTime = "0.3.1"
 
+    const val compose = "1.1.1"
+    const val activity_compose = "1.4.0"
+    const val lifecycle_runtime = "2.4.1"
+
 }
 
 object Deps {
@@ -31,4 +35,14 @@ object Deps {
     const val android_gradle_plugin = "com.android.tools.build:gradle:${Versions.android_gradle_plugin}"
     const val napier = "io.github.aakira:napier:${Versions.napier}"
     const val datetime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlinxDateTime}"
+
+    object Compose {
+        const val compose = "androidx.compose.ui:ui:${Versions.compose}"
+        const val material = "androidx.compose.material:material:${Versions.compose}"
+        const val compiler = "androidx.compose.compiler:compiler:${Versions.compose}"
+        const val foundation = "androidx.compose.foundation:foundation:${Versions.compose}"
+        const val ui_tooling_preview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
+        const val activity_compose = "androidx.activity:activity-compose:${Versions.activity_compose}"
+        const val lifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle_runtime}"
+    }
 }

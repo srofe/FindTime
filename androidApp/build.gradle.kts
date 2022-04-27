@@ -43,12 +43,13 @@ dependencies {
         implementation(napier)
     }
 
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.compose.ui:ui:1.1.1")
-    implementation("androidx.compose.material:material:1.1.1")
-    implementation("androidx.compose.compiler:compiler:1.1.1")
-    implementation("androidx.compose.foundation:foundation:1.1.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.1.1")
-    implementation("androidx.activity:activity-compose:1.4.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.1")
+    with (Deps.Compose) {
+        implementation(compose)
+        implementation(material)
+        implementation(compiler)
+        implementation(foundation)
+        implementation(ui_tooling_preview)
+        implementation(activity_compose)
+        implementation(lifecycle)
+    }
 }
