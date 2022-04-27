@@ -11,7 +11,7 @@ object Versions {
     const val target_sdk = 32
     const val compile_sdk = 32
 
-    const val kotlin_gradle_plugin = "1.6.21"
+    const val kotlin_gradle_plugin = "1.6.10"
     const val android_gradle_plugin = "7.1.3"
 
     const val material = "1.5.0"
