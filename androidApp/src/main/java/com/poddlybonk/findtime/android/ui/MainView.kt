@@ -49,5 +49,44 @@ fun MainView(actionBarFun: topBarFun = { emptyComposable() }) {
     val showAddDialog = remember { mutableStateOf(false) }
     val currentTimezoneStrings = remember { SnapshotStateList<String>() }
     val selectedIndex = remember { mutableStateOf(0) }
-    AppTheme {}
+    AppTheme {
+        Scaffold(topBar = {
+            actionBarFun(selectedIndex.value)
+        },
+        floatingActionButton = {
+            if (selectedIndex.value == 0) {
+                FloatingActionButton(
+                    modifier = Modifier.padding(16.dp),
+                    onClick = {
+                        showAddDialog.value = true
+                    }) {
+                    Icon(
+                        imageVector = Icons.Default.Add,
+                        contentDescription = null
+                    )
+                }
+            }
+        },
+        bottomBar = {
+            BottomNavigation {
+                bottomNavigationItems.forEachIndexed { i, bottomNavigationItem ->
+                    BottomNavigationItem(
+                        icon = {
+                            Icon(
+                                bottomNavigationItem.icon,
+                                contentDescription = bottomNavigationItem.iconContentDescription
+                            )
+                        },
+                        selected = selectedIndex.value == i,
+                        onClick = {
+                            selectedIndex.value = i
+                        }
+                    )
+                }
+            }
+        }) {
+            // TODO: Replace with dialog
+            // TODO: Replace with screens
+        }
+    }
 }
