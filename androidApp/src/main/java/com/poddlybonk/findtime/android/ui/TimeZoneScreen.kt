@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.*
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import com.poddlybonk.findtime.TimeZoneHelper
 import com.poddlybonk.findtime.TimeZoneHelperImpl
 import kotlinx.coroutines.delay
@@ -27,9 +28,11 @@ fun TimeZoneScreen(currentTimeZoneStrings: SnapshotStateList<String>) {
             }
         }
         LocalTimeCard(
-            city = timezoneHelper.currentTime(),
+            city = timezoneHelper.currentTimeZone(),
             time = time,
             date = timezoneHelper.getDate(timezoneHelper.currentTimeZone()))
         Spacer(modifier = Modifier.size(16.dp))
+
+        // TODO: Add Timezone items
     }
 }
