@@ -72,6 +72,6 @@ fun LocalTimeCard(city: String, time: String, date: String) {
 @Composable
 fun LocalTimeCardPreview() {
     AppTheme {
-        LocalTimeCard(city = "Brisbane", time = "9:00 am", date = "3 Jan 2022")
+        LocalTimeCard(city = "Brisbane", time = "9:00 am", date = "Friday, 29 May")
     }
 }
