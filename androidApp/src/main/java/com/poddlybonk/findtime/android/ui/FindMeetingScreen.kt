@@ -32,7 +32,7 @@ import com.poddlybonk.findtime.TimeZoneHelperImpl
 fun FindMeetingScreen(
     timezoneStrings: List<String>
 ) {
-    val lisState = rememberLazyListState()
+    val listState = rememberLazyListState()
     val startTime = remember {
         mutableStateOf(8)
     }
@@ -41,7 +41,7 @@ fun FindMeetingScreen(
     }
     val selectedTimeZones = remember {
         val selected = SnapshotStateMap<Int, Boolean>()
-        for (i in 0 .. timezoneStrings.size - 1) selected[i] = true
+        for (i in 0..timezoneStrings.size - 1) selected[i] = true
         selected
     }
     val timeZoneHelper: TimeZoneHelper = TimeZoneHelperImpl()
@@ -94,6 +94,55 @@ fun FindMeetingScreen(
                 text = "Time Zones",
                 style = MaterialTheme.typography.h6
             )
+        }
+        Spacer(modifier = Modifier.size(16.dp))
+        LazyColumn(
+            modifier = Modifier
+                .weight(0.6F)
+                .fillMaxWidth(),
+            contentPadding = PaddingValues(16.dp),
+            state = listState
+        ) {
+            itemsIndexed(timezoneStrings) { i, timezone ->
+                Surface(
+                    modifier = Modifier
+                        .padding(8.dp)
+                        .fillMaxWidth()
+                ) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                    ) {
+                        Checkbox(checked = isSelected(selectedTimeZones, i),
+                            onCheckedChange = {
+                                selectedTimeZones[i] = it
+                            })
+                        Text(timezone, modifier = Modifier.align(Alignment.CenterVertically))
+                    }
+                }
+            }
+        }
+        Spacer(modifier = Modifier.weight(0.1f))
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(0.2F)
+                .wrapContentWidth(Alignment.CenterHorizontally)
+                .padding(start = 4.dp, end = 4.dp)
+        ) {
+            OutlinedButton(onClick = {
+                meetingHours.clear()
+                meetingHours.addAll(
+                    timeZoneHelper.search(
+                        startTime.value,
+                        endTime.value,
+                        getSelectedTimeZones(timezoneStrings, selectedTimeZones)
+                    )
+                )
+                showMeetingDialog.value = true
+            }) {
+                Text("Search")
+            }
         }
         Spacer(modifier = Modifier.size(16.dp))
     }
