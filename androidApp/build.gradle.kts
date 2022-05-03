@@ -45,7 +45,10 @@ dependencies {
 
     with (Deps.Compose) {
         implementation(compose)
+        implementation(compose_util)
+        implementation(compose_ui_tooling)
         implementation(material)
+        implementation(material_icons_extended)
         implementation(compiler)
         implementation(foundation)
         implementation(ui_tooling_preview)
