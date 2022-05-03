@@ -25,7 +25,7 @@ sealed class Screen(val title: String) {
     object FindTimeScreen : Screen("Find Time")
 }
 
-data class BottomNavigationItems (
+data class BottomNavigationItems(
     val route: String,
     val icon: ImageVector,
     val iconContentDescription: String
@@ -53,38 +53,38 @@ fun MainView(actionBarFun: topBarFun = { emptyComposable() }) {
         Scaffold(topBar = {
             actionBarFun(selectedIndex.value)
         },
-        floatingActionButton = {
-            if (selectedIndex.value == 0) {
-                FloatingActionButton(
-                    modifier = Modifier.padding(16.dp),
-                    onClick = {
-                        showAddDialog.value = true
-                    }) {
-                    Icon(
-                        imageVector = Icons.Default.Add,
-                        contentDescription = null
-                    )
-                }
-            }
-        },
-        bottomBar = {
-            BottomNavigation {
-                bottomNavigationItems.forEachIndexed { i, bottomNavigationItem ->
-                    BottomNavigationItem(
-                        icon = {
-                            Icon(
-                                bottomNavigationItem.icon,
-                                contentDescription = bottomNavigationItem.iconContentDescription
-                            )
-                        },
-                        selected = selectedIndex.value == i,
+            floatingActionButton = {
+                if (selectedIndex.value == 0) {
+                    FloatingActionButton(
+                        modifier = Modifier.padding(16.dp),
                         onClick = {
-                            selectedIndex.value = i
-                        }
-                    )
+                            showAddDialog.value = true
+                        }) {
+                        Icon(
+                            imageVector = Icons.Default.Add,
+                            contentDescription = null
+                        )
+                    }
                 }
-            }
-        }) {
+            },
+            bottomBar = {
+                BottomNavigation {
+                    bottomNavigationItems.forEachIndexed { i, bottomNavigationItem ->
+                        BottomNavigationItem(
+                            icon = {
+                                Icon(
+                                    bottomNavigationItem.icon,
+                                    contentDescription = bottomNavigationItem.iconContentDescription
+                                )
+                            },
+                            selected = selectedIndex.value == i,
+                            onClick = {
+                                selectedIndex.value = i
+                            }
+                        )
+                    }
+                }
+            }) {
             if (showAddDialog.value) {
                 AddTimeZoneDialog(
                     onAdd = { newTimezones ->
@@ -102,7 +102,7 @@ fun MainView(actionBarFun: topBarFun = { emptyComposable() }) {
             }
             when (selectedIndex.value) {
                 0 -> TimeZoneScreen(currentTimezoneStrings)
-//                 1 -> FIndMeetingScreen(currentTimezoneStrings)
+                1 -> FindMeetingScreen(currentTimezoneStrings)
             }
         }
     }
