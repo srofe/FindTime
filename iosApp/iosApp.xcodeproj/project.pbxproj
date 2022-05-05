@@ -18,6 +18,7 @@
 		BBBBBC5E1757DAF834D9494F /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F3835357891D6B9866E6EE /* Pods_iosApp.framework */; };
 		F40E7D2E28235FD100FADC2B /* Searchbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40E7D2D28235FD100FADC2B /* Searchbar.swift */; };
 		F40E7D30282363A900FADC2B /* PresentationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40E7D2F282363A900FADC2B /* PresentationSettings.swift */; };
+		F40E7D322823648100FADC2B /* NumberTimeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40E7D312823648100FADC2B /* NumberTimeCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F40E7D2D28235FD100FADC2B /* Searchbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searchbar.swift; sourceTree = "<group>"; };
 		F40E7D2F282363A900FADC2B /* PresentationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationSettings.swift; sourceTree = "<group>"; };
+		F40E7D312823648100FADC2B /* NumberTimeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTimeCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				685F087E99AA2A46A0DBD5EC /* TimeCard.swift */,
 				F40E7D2D28235FD100FADC2B /* Searchbar.swift */,
 				F40E7D2F282363A900FADC2B /* PresentationSettings.swift */,
+				F40E7D312823648100FADC2B /* NumberTimeCard.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				F40E7D30282363A900FADC2B /* PresentationSettings.swift in Sources */,
 				685F0B2ACA1D7FAACFCB96D8 /* Utils.swift in Sources */,
 				685F0A0941AEBD6EFF753AED /* TimezoneItems.swift in Sources */,
+				F40E7D322823648100FADC2B /* NumberTimeCard.swift in Sources */,
 				F40E7D2E28235FD100FADC2B /* Searchbar.swift in Sources */,
 				685F08260F430953062B6F9A /* TimezoneDialog.swift in Sources */,
 				685F0E8BBDF261E2A28D513A /* TimeCard.swift in Sources */,
