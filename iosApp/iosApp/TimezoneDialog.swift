@@ -17,7 +17,7 @@ struct TimezoneDialog: View {
 
     var body: some View {
         VStack {
-            Searchbar(text: $searchText)
+//            Searchbar(text: $searchText)
             List(selection: $timezoneItems.selectedTimezones) {
                 ForEach(
                         timezoneItems.timezones.filter {
