@@ -38,7 +38,10 @@ object Deps {
 
     object Compose {
         const val compose = "androidx.compose.ui:ui:${Versions.compose}"
+        const val compose_util = "androidx.compose.ui:ui-util:${Versions.compose}"
+        const val compose_ui_tooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
         const val material = "androidx.compose.material:material:${Versions.compose}"
+        const val material_icons_extended = "androidx.compose.material:material-icons-extended:${Versions.compose}"
         const val compiler = "androidx.compose.compiler:compiler:${Versions.compose}"
         const val foundation = "androidx.compose.foundation:foundation:${Versions.compose}"
         const val ui_tooling_preview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
