@@ -21,6 +21,7 @@
 		F40E7D322823648100FADC2B /* NumberTimeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40E7D312823648100FADC2B /* NumberTimeCard.swift */; };
 		F40E7D342823683F00FADC2B /* ListModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40E7D332823683F00FADC2B /* ListModifier.swift */; };
 		F40E7D362823696500FADC2B /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40E7D352823696500FADC2B /* CardModifier.swift */; };
+		F40E7D382823DB3B00FADC2B /* TimezoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40E7D372823DB3B00FADC2B /* TimezoneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F40E7D312823648100FADC2B /* NumberTimeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTimeCard.swift; sourceTree = "<group>"; };
 		F40E7D332823683F00FADC2B /* ListModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModifier.swift; sourceTree = "<group>"; };
 		F40E7D352823696500FADC2B /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
+		F40E7D372823DB3B00FADC2B /* TimezoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezoneView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				F40E7D312823648100FADC2B /* NumberTimeCard.swift */,
 				F40E7D332823683F00FADC2B /* ListModifier.swift */,
 				F40E7D352823696500FADC2B /* CardModifier.swift */,
+				F40E7D372823DB3B00FADC2B /* TimezoneView.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				F40E7D362823696500FADC2B /* CardModifier.swift in Sources */,
 				685F0A0941AEBD6EFF753AED /* TimezoneItems.swift in Sources */,
 				F40E7D322823648100FADC2B /* NumberTimeCard.swift in Sources */,
+				F40E7D382823DB3B00FADC2B /* TimezoneView.swift in Sources */,
 				F40E7D342823683F00FADC2B /* ListModifier.swift in Sources */,
 				F40E7D2E28235FD100FADC2B /* Searchbar.swift in Sources */,
 				685F08260F430953062B6F9A /* TimezoneDialog.swift in Sources */,

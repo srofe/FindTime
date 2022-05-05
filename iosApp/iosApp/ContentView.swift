@@ -6,7 +6,7 @@ struct ContentView: View {
 
 	var body: some View {
         TabView {
-            TimeZoneView()
+            TimezoneView()
                 .tabItem {
                     Label("Time Zones", systemImage: "network")
                 }
