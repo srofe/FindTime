@@ -17,19 +17,54 @@ struct TimezoneView: View {
     @State private var showTimezoneDialog = false
 
     var body: some View {
-        VStack {
-            TimeCard(timezone: timezoneHelper.currentTimeZone(),
-                     time: DateFormatter.short.string(from: currentDate),
-                     date: DateFormatter.long.string(from: currentDate))
-            Spacer()
-            // TODO: Add List
+        NavigationView {
+            VStack {
+                TimeCard(timezone: timezoneHelper.currentTimeZone(),
+                        time: DateFormatter.short.string(from: currentDate),
+                        date: DateFormatter.long.string(from: currentDate))
+                Spacer()
+                List {
+                    ForEach(Array(timezoneItems.selectedTimezones), id: \.self) { timezone in
+                        NumberTimeCard(timezone: timezone,
+                                time: timezoneHelper.getTime(timezoneId: timezone),
+                                hours: "\(timezoneHelper.hoursFromTimeZone(otherTimeZoneId: timezone)) hours from local",
+                                date: timezoneHelper.getDate(timezoneId: timezone))
+                                .withListModifier()
+                    }
+                            .onDelete(perform: deleteItems)
+                }
+                        .listStyle(.plain)
+                Spacer()
+            }
+                    .onReceive(timer) { input in
+                        currentDate = input
+                    }
+                    .navigationTitle("World Clocks")
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button(action: {
+                                showTimezoneDialog = true
+                            }) {
+                                Image(systemName: "plus")
+                                        .frame(alignment: .trailing)
+                                        .foregroundColor(.black)
+                            }
+                        }
+                    }
         }
-        .onReceive(timer) { input in
-            currentDate = input
-        }
-        .navigationTitle("World Clocks")
+                .fullScreenCover(isPresented: $showTimezoneDialog) {
+                    TimezoneDialog()
+                            .environmentObject(timezoneItems)
+                }
     }
-    // TODO: Add toolbar
+
+    func deleteItems(at offsets: IndexSet) {
+        let timezoneArray = Array(timezoneItems.selectedTimezones)
+        for index in offsets {
+            let element = timezoneArray[index]
+            timezoneItems.selectedTimezones.remove(element)
+        }
+    }
 }
 
 struct TimezoneView_Previews: PreviewProvider {
