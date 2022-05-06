@@ -23,6 +23,7 @@
 		F40E7D342823683F00FADC2B /* ListModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40E7D332823683F00FADC2B /* ListModifier.swift */; };
 		F40E7D362823696500FADC2B /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40E7D352823696500FADC2B /* CardModifier.swift */; };
 		F40E7D382823DB3B00FADC2B /* TimezoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40E7D372823DB3B00FADC2B /* TimezoneView.swift */; };
+		F4E7F5DD2825DF0C00D5A40E /* FindMeeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7F5DC2825DF0C00D5A40E /* FindMeeting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		F40E7D332823683F00FADC2B /* ListModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModifier.swift; sourceTree = "<group>"; };
 		F40E7D352823696500FADC2B /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
 		F40E7D372823DB3B00FADC2B /* TimezoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezoneView.swift; sourceTree = "<group>"; };
+		F4E7F5DC2825DF0C00D5A40E /* FindMeeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMeeting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				F40E7D352823696500FADC2B /* CardModifier.swift */,
 				F40E7D372823DB3B00FADC2B /* TimezoneView.swift */,
 				685F00C1FD12B1E62AD746B7 /* HourSheet.swift */,
+				F4E7F5DC2825DF0C00D5A40E /* FindMeeting.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				F40E7D2E28235FD100FADC2B /* Searchbar.swift in Sources */,
 				685F08260F430953062B6F9A /* TimezoneDialog.swift in Sources */,
 				685F0E8BBDF261E2A28D513A /* TimeCard.swift in Sources */,
+				F4E7F5DD2825DF0C00D5A40E /* FindMeeting.swift in Sources */,
 				685F098EB3D39FA846F32480 /* HourSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
