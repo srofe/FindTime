@@ -11,7 +11,7 @@ import shared
 
 struct FindMeeting: View {
     @EnvironmentObject private var timezoneItems: TimezoneItems
-    private var timezoneHelper = TimeZoneHelperImpl()
+    private let timezoneHelper = TimeZoneHelperImpl()
     @State private var meetingHours: [Int] = []
     @State private var showHoursDialog = false
     @State private var startDate = Calendar.current.date(bySettingHour: 8, minute: 0, second: 0, of: Date())!
@@ -58,7 +58,9 @@ struct FindMeeting: View {
                     .frame(height: 8)
             }
             .navigationTitle("Find Meeting Time")
-            // TODO: Add sheet
+            .sheet(isPresented: $showHoursDialog) {
+                HourSheet(hours: $meetingHours)
+            }
         }
     }
 }

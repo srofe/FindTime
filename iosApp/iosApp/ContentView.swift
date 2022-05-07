@@ -10,6 +10,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Time Zones", systemImage: "network")
                 }
+            FindMeeting()
+                .tabItem {
+                    Label("Time Zones", systemImage: "clock")
+                }
         }
         .accentColor(Color.white)
         .environmentObject(timezoneItems)
