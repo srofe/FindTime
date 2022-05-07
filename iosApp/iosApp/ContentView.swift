@@ -2,9 +2,21 @@ import SwiftUI
 import shared
 
 struct ContentView: View {
-	let greet = "Hello iOS"
+    @StateObject private var timezoneItems = TimezoneItems()
+
 	var body: some View {
-		Text(greet)
+        TabView {
+            TimezoneView()
+                .tabItem {
+                    Label("Time Zones", systemImage: "network")
+                }
+            FindMeeting()
+                .tabItem {
+                    Label("Time Zones", systemImage: "clock")
+                }
+        }
+        .accentColor(Color.white)
+        .environmentObject(timezoneItems)
 	}
 }
 
