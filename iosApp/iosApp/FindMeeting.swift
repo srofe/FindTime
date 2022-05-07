@@ -22,7 +22,21 @@ struct FindMeeting: View {
             VStack {
                 Spacer()
                     .frame(height: 8)
-                // TODO: Add Form
+                Form {
+                    Section(header: Text("Time Range")) {
+                        DatePicker("Start Time", selection: $startDate, displayedComponents: .hourAndMinute)
+                        DatePicker("End Time", selection: $endDate, displayedComponents: .hourAndMinute)
+                    }
+                    Section(header: Text("Time Zones")) {
+                        ForEach(Array(timezoneItems.selectedTimezones), id: \.self) { timezone in
+                            HStack {
+                                Text(timezone)
+                                Spacer()
+                            }
+                        }
+                    }
+                }
+                // TODO: Add Button
             }
             .navigationTitle("Find Meeting Time")
             // TODO: Add sheet
