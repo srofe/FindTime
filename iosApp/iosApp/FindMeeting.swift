@@ -36,7 +36,26 @@ struct FindMeeting: View {
                         }
                     }
                 }
-                // TODO: Add Button
+                Spacer()
+                Button(action: {
+                    meetingHours.removeAll()
+                    let startHour = Calendar.current.component(.hour, from: startDate)
+                    let endHour = Calendar.current.component(.hour, from: endDate)
+                    let hours = timezoneHelper.search(
+                        startHour: Int32(startHour),
+                        endHour: Int32(endHour),
+                        timezoneStrings: Array(timezoneItems.selectedTimezones))
+                    let hourInts = hours.map { kotlinHour in
+                        Int(truncating: kotlinHour)
+                    }
+                    meetingHours += hourInts
+                    showHoursDialog = true
+                }) {
+                    Text("Search")
+                        .foregroundColor(.black)
+                }
+                Spacer()
+                    .frame(height: 8)
             }
             .navigationTitle("Find Meeting Time")
             // TODO: Add sheet
